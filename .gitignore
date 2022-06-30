@@ -1,0 +1,7 @@
+DEV_WORK_NOTES.md
+node_modules
+.env
+
+dist
+
+.DS_Store
