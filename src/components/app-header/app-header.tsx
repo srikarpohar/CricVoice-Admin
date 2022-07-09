@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { SimpleDropdown } from "../../common/dropdowns/simple-dropdown/simple-dropdown";
-import { Spinner } from "../../common/loaders/spinner/spinner.component";
 import { IUser } from "../../models";
 import { useLogoutUserMutation, useRefreshTokenQuery } from "../../redux-state/auth/authApiSlice";
 import './app-header.scss';
 import logo from '../../../assets/icons/cricvoice-logo.png';
 import { SERVER_URL } from "../../environment/environment.dev";
+import { useNavigate } from "react-router-dom";
+import { Spinner, SimpleDropdown } from "@srikarpohar/cricvoice-library";
 
 interface IProps{
 
@@ -17,6 +17,8 @@ interface IState{
 
 export const AppHeader = (props: IProps) => {
 	const [state, setState] = useState<IState>({});
+
+	const navigate = useNavigate();
 
 	const {
 		data: response
@@ -32,7 +34,9 @@ export const AppHeader = (props: IProps) => {
 	}, {
 		label: "Signup",
 		value: "Signup",
-		href: "/signup"
+		onClick: () => {
+			navigate("/signup");
+		}
 	}, {
 		label: "Logout",
 		value: "Logout",

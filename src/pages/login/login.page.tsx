@@ -1,5 +1,5 @@
+import { Spinner } from "@srikarpohar/cricvoice-library";
 import { useState } from "react";
-import { Spinner } from "../../common/loaders/spinner/spinner.component";
 import { useLoginUserMutation } from "../../redux-state/auth/authApiSlice";
 import "./login.page.scss";
 

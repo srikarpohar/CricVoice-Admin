@@ -3,13 +3,13 @@ import React from "react";
 import { connect } from "react-redux";
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
-import { Spinner } from "./common/loaders/spinner/spinner.component";
 import { IResponse, IUser } from "./models";
 import { authEndPoints } from "./redux-state/auth/authApiSlice";
 import { RootState } from "./redux-state/store";
 import { LoginPage } from "./pages/login/login.page";
 import { SignupPage } from "./pages/signup/signup.page";
 import { HomePage } from "./pages/home/home.page";
+import { Spinner } from "@srikarpohar/cricvoice-library";
 
 interface IProps{
 	loginInfo: QueryResultSelectorResult<any>,

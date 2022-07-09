@@ -29,7 +29,7 @@ function createConfig(env) {
           exclude: /node_modules/,
         }, 
         {
-            test: /\.scss?$/,
+            test: /\.s?css?$/,
             exclude: /node_modules/,
             use: [
                 'style-loader',
